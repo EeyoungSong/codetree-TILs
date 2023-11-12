@@ -38,9 +38,11 @@ for _ in range(n):
                             n_arr[num] += 1
                         else:
                             n_arr[num] = 1
+
+
 cnt = 0
 for key in n_arr:
-    if n_arr[key] == 4:
+    if n_arr[key] == n:
         cnt += 1
 
 print(cnt)
