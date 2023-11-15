@@ -8,4 +8,9 @@ def strange(arr, c, n):
 
 n = int(input())
 arr = [1, 2]
-print(strange(arr, 3, n))
+if n == 1:
+    print(arr[0])
+elif n == 2:
+    print(arr[1])
+else:
+    print(strange(arr, 3, n))
