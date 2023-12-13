@@ -4,7 +4,7 @@ b = list(map(int, input().split()))
 
 answer = 'No'
 for i in range(len_a):
-    if a[i] == b[0] and i + len_b < len_a:
+    if a[i] == b[0] and i + len_b < len_a + 1:
         check = True
         for j in range(len_b):
             if a[i+j] != b[j]:
