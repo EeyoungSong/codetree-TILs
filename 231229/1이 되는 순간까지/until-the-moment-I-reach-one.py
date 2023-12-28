@@ -1,13 +1,12 @@
 n = int(input())
 
-def get_sum(n, cnt):
+def get_sum(n):
     if n <= 1:
-        return cnt
+        return 0
+    
     if n % 2 == 0:
-        n //= 2
+        return get_sum(n // 2) + 1
     else:
-        n //= 3
-    cnt += 1
-    return get_sum(n, cnt)
+        return get_sum(n // 3) + 1
 
-print(get_sum(n, 0))
+print(get_sum(n))
