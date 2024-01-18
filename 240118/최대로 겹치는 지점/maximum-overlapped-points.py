@@ -2,7 +2,7 @@ MAX_NUM = 200
 OFFSET = 100
 
 n = int(input())
-arr = [0] * MAX_NUM
+arr = [0] * (MAX_NUM+1)
 
 for _ in range(n):
     a, b = map(int, input().split())
