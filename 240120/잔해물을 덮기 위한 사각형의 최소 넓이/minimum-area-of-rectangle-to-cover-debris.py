@@ -29,4 +29,11 @@ for i in range(0, MAX_NUM):
             if max_col <= j:
                 max_col = j
 
-print((max_col - min_col + 1) * (max_row - min_row + 1))
+cnt = 0
+for elem in grid:
+    cnt += elem.count(1)
+
+if cnt == 0:
+    print(0)
+else:
+    print((max_col - min_col + 1) * (max_row - min_row + 1))
