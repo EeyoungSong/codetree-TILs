@@ -1,6 +1,6 @@
-offset = 10
-MAX_NUM = 20
-grid = [[0] * MAX_NUM for _ in range(MAX_NUM)]
+offset = 100
+MAX_NUM = 200
+grid = [[0] * (MAX_NUM + 1) for _ in range(MAX_NUM + 1)]
 
 n = int(input())
 
