@@ -11,9 +11,9 @@ if dir_num == 1:
 elif dir_num == 2:
     r, c = (k-1) % n, n-1
 elif dir_num == 3:
-    r, c = n-1, (n-1)- ((k-1) % n)
+    r, c = n-1, (n-1) - ((k-1) % n)
 else:
-    r, c = (k-1) % n, 0
+    r, c = (n-1) - ((k-1) % n), 0
 
 #print(r, c)
 
