@@ -1,11 +1,21 @@
 n = int(input())
-
 grid = [list(input()) for _ in range(n)]
+k = int(input())
         
 drs, dcs = [0, 1, 0, -1], [1, 0, -1, 0]
-dir_num = 1
-r = 0
-c = 1
+dir_num = ((k-1) // n + 1) % 4 
+
+
+if dir_num == 1:
+    r, c = 0, k-1
+elif dir_num == 2:
+    r, c = (k-1) % n, n-1
+elif dir_num == 3:
+    r, c = n-1, (k-1) % n
+else:
+    r, c = (k-1) % n, 0
+
+
 
 
 def in_range(r, c):
