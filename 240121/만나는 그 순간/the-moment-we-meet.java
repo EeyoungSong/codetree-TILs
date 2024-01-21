@@ -17,7 +17,7 @@ public class Main {
         int time_b = array_b[0];
 
         int ans = -1;
-        for (int i = 1; i <= time_a; i++) {
+        for (int i = 1; i < time_a; i++) {
             if (array_a[i] == array_b[i]) {
                 ans = i;
                 break;
