@@ -12,14 +12,14 @@ def record(n, arr):
             arr[at] = arr[at - 1] + (1 if d == 'R' else -1) 
             at += 1
 
-    return arr
+    return arr, at
 
-arr_a = record(n, arr_a)
-arr_b = record(m, arr_b)
+arr_a, time_a = record(n, arr_a)
+arr_b, time_b = record(m, arr_b)
 
 ans = -1
-for i in range(1, MAX_NUM):
-    if (i != 0) and (arr_a[i] == arr_b[i]):
+for i in range(1, time_a):
+    if (arr_a[i] == arr_b[i]):
         ans = i
         break
 
