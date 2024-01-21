@@ -8,5 +8,6 @@ for _ in range(m):
     arr[s] += 1
     if arr[s] >= k:
         ans = s
+        break
 
 print(ans)
