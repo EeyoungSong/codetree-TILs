@@ -43,16 +43,14 @@ public class Main {
             leader = "b";
         }
         for (int i = 2; i < array_a[0]; i++) {
-            String temp;
+            String temp = "same";
             if (array_a[i] > array_b[i]) {
                 temp = "a";
             }
             else if (array_a[i] < array_b[i]) {
                 temp = "b";
             }
-            else {
-                temp = "same";
-            }
+            
             if ((!temp.equals("same")) && (leader != temp)) {
                 leader = temp;
                 cnt += 1;
