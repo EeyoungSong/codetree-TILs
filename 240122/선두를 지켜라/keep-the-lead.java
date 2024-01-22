@@ -14,7 +14,7 @@ public class Main {
         array_b = record_moving(m, array_b);
 
         int cnt = 0;
-        outrun(array_a, array_b);
+        count_outrun(array_a, array_b);
             
     }
     public static int[] record_moving(int n, int[] array) {
@@ -31,34 +31,35 @@ public class Main {
         array[0] = time;
         return array;
     }
-    public static void outrun(int[] array_a, int[] array_b) {
+    public static void count_outrun(int[] array_a, int[] array_b) {
         int cnt = 0;
         String[] lead_array = new String[array_a[0]];
 
-        for (int i = 0; i < array_a[0]; i++) {
+        String leader = "";
+        if (array_a[1] > array_b[1]) {
+            leader = "a";
+        }
+        else if (array_a[1] < array_b[1]) {
+            leader = "b";
+        }
+        for (int i = 2; i < array_a[0]; i++) {
+            String temp;
             if (array_a[i] > array_b[i]) {
-                lead_array[i] = "a";
+                temp = "a";
             }
             else if (array_a[i] < array_b[i]) {
-                lead_array[i] = "b";
+                temp = "b";
             }
             else {
-                lead_array[i] = "ab";
+                temp = "same";
             }
-        }
-        String leader = "";
-        for (int i = 1; i < array_a[0]; i++) {
-            if ((lead_array[i] != "ab") && (lead_array[i] != leader)) {
-                leader = lead_array[i];
+            if ((!temp.equals("same")) && (leader != temp)) {
+                leader = temp;
                 cnt += 1;
-                // System.out.printf("%s", leader);
             }
         }
-        if (cnt > 0){
-            System.out.printf("%d", cnt - 1);
-        } else {
-            System.out.printf("%d", cnt);
-        }
+        System.out.printf("%d", cnt);
+        
         
     }
 }
