@@ -54,6 +54,11 @@ public class Main {
                 // System.out.printf("%s", leader);
             }
         }
-        System.out.printf("%d", cnt - 1 if cnt > 0);
+        if (cnt > 0){
+            System.out.printf("%d", cnt - 1);
+        } else {
+            System.out.printf("%d", cnt);
+        }
+        
     }
 }
