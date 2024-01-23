@@ -40,11 +40,17 @@ public class Main {
             if ((confected[x] == 1) && (confection_able[x] < K)) {
                 confected[y] = 1;
                 confection_able[x]++;
+                if(confected[y] == 1) confection_able[y]++;
             }
             else if ((confected[y] == 1) && (confection_able[y] < K)) {
                 confected[x] = 1;
                 confection_able[y]++;
+                if (confected[x] == 1) confection_able[x]++;
             }
+            // System.out.printf("전염가능성 : ");
+            // print_array(confection_able);
+            // System.out.printf("전염된 : ");
+            // print_array(confected);
         }
         // print_array(confection_able);
         print_array(confected);
