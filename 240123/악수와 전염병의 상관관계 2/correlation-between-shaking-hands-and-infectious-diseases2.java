@@ -38,14 +38,15 @@ public class Main {
             int y = input_array[i][2];
             // System.out.printf("%d %d %d   ", t, x, y);
             if ((confected[x] == 1) && (confection_able[x] < K)) {
+                if(confected[y] == 1) confection_able[y]++;
                 confected[y] = 1;
                 confection_able[x]++;
-                if(confected[y] == 1) confection_able[y]++;
+                
             }
             else if ((confected[y] == 1) && (confection_able[y] < K)) {
+                if (confected[x] == 1) confection_able[x]++;
                 confected[x] = 1;
                 confection_able[y]++;
-                if (confected[x] == 1) confection_able[x]++;
             }
             // System.out.printf("전염가능성 : ");
             // print_array(confection_able);
