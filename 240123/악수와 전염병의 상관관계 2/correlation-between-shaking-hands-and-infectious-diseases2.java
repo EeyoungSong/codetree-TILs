@@ -37,11 +37,11 @@ public class Main {
             int x = input_array[i][1];
             int y = input_array[i][2];
             // System.out.printf("%d %d %d   ", t, x, y);
-            if ((confection_able[x] < 2) && (confected[x] == 1)) {
+            if ((confected[x] == 1) && (confection_able[x] < K)) {
                 confected[y] = 1;
                 confection_able[x]++;
             }
-            else if ((confection_able[y] < 2) && (confected[y] == 1)) {
+            else if ((confected[y] == 1) && (confection_able[y] < K)) {
                 confected[x] = 1;
                 confection_able[y]++;
             }
