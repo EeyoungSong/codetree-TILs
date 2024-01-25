@@ -5,7 +5,7 @@ grid = [[0] * m for _ in range(n)]
 drs, dcs = [0, 1, 0, -1], [1, 0, -1, 0]
 
 def in_range(r, c):
-    return  (0 <= r < n and 0 <= c < n) and grid[r][c] == 0
+    return  (0 <= r < n and 0 <= c < m) and grid[r][c] == 0
 
 dir_num = 0
 
