@@ -39,9 +39,9 @@ public class Main {
             dir_num = (dir_num + 1) % 4;
         }
         else if (d == 'L') {
-            dir_num = 4 + ((dir_num - 1) % 4);
+            dir_num = (((dir_num - 1) % 4) >= 0) ? ((dir_num - 1) % 4) : 4 + ((dir_num - 1) % 4);
         }
-        
+        // System.out.printf("%d\n", dir_num);
         return dir_num;
     }
 }
