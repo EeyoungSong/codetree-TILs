@@ -28,7 +28,7 @@ public class Main {
                 ans = time;
             }
             time += 1;
-            
+            // System.out.printf("%d\n", ans);
         }
         System.out.printf("%d", ans);
 
@@ -39,7 +39,7 @@ public class Main {
             dir_num = (dir_num + 1) % 4;
         }
         else if (d == 'L') {
-            dir_num = (dir_num - 1) % 4;
+            dir_num = 4 + ((dir_num - 1) % 4);
         }
         
         return dir_num;
