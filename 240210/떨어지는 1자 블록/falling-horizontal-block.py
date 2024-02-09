@@ -11,7 +11,7 @@ def is_empty(i, start):
 
 i = 0
 while True:
-    if not is_empty(i, start):
+    if i >= n or not is_empty(i, start):
         #print(i)
         for j in range(start, start+m):
             grid[i-1][j] = 1
