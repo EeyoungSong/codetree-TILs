@@ -24,7 +24,6 @@ def choose(max_num, set_arr, current_num):
         temp = record(set_arr)
         #print_arr(temp)
         cnt = count(temp)
-        #print(cnt)
         max_num = max(max_num, cnt)
         return max_num
 
@@ -46,8 +45,9 @@ def record(set_arr):
         r, c = elem
 
         if b_num == 1:
-            for i in range(n):
-                temp[i][c] = 1
+            for i in range(r-2, r+3):
+                if in_range(i, c):
+                    temp[i][c] = 1
     
         elif b_num == 2:
             drs, dcs = [0, 1, 0, -1], [1, 0, -1, 0]
