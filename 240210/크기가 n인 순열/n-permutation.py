@@ -1,4 +1,4 @@
-n = 3
+n = int(input())
 visited = [0] * (n+1)
 answer = []
 
