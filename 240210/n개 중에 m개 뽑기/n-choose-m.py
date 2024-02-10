@@ -8,6 +8,8 @@ def print_ans():
     print()
 
 def choose(curr_num, cnt):
+    if cnt > m:
+        return
     if curr_num > n:
         if cnt == m:
             print_ans()
