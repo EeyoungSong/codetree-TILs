@@ -9,9 +9,13 @@ def print_ans():
     print()
 
 def xor():
-    ans = answer[0]
+    answer_num = []
+    for i in range(m):
+        if answer[i] == 1:
+            answer_num.append(num_list[i])
+    ans = answer_num[0]
     for i in range(1, m):
-        ans = ans ^ answer[i]
+        ans = ans ^ answer_num[i]
     return ans
         
 
@@ -24,11 +28,13 @@ def choose(curr_num, cnt):
             max_ans = max(a, max_ans)
         return 
     
-    answer.append(curr_num)
+    answer.append(1)
     choose(curr_num+1, cnt+1)
     answer.pop()
 
+    answer.append(0)
     choose(curr_num+1, cnt)
+    answer.pop()
 
 choose(1, 0)
 print(max_ans)
