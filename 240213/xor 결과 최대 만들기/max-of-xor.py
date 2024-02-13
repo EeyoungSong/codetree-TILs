@@ -10,7 +10,7 @@ def print_ans():
 
 def xor():
     answer_num = []
-    for i in range(m):
+    for i in range(n):
         if answer[i] == 1:
             answer_num.append(num_list[i])
     ans = answer_num[0]
