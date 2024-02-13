@@ -19,7 +19,8 @@ def get_diff():
             g1.append(num_list[i])
         else:
             g2.append(num_list[i])
-        return abs(sum(g1)-sum(g2))
+    
+    return abs(sum(g1)-sum(g2))
         
 
 def choose(curr_num, cnt):
