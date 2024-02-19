@@ -13,7 +13,7 @@
 |교재|이름|난이도|상태|최근 제출 코드|
 |---|---|:---:|:---:|---|
 |[Intermediate Low / DFS / DFS](https://www.codetree.ai/missions?missionId=2)|[[개념]그래프 탐색](https://www.codetree.ai/missions/2/problems/graph-traversal)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/EeyoungSong/codetree-TILs/blob/main/240215/%EA%B7%B8%EB%9E%98%ED%94%84%20%ED%83%90%EC%83%89/graph-traversal.py)|
-|[Intermediate Low / DFS / DFS](https://www.codetree.ai/missions?missionId=2)|[[개념]두 방향 탈출 가능 여부 판별하기](https://www.codetree.ai/missions/2/problems/determine-escapableness-with-2-ways)|![쉬움][easy]|![Failed][failed]|[링크](https://github.com/EeyoungSong/codetree-TILs/blob/main/240215/%EB%91%90%20%EB%B0%A9%ED%96%A5%20%ED%83%88%EC%B6%9C%20%EA%B0%80%EB%8A%A5%20%EC%97%AC%EB%B6%80%20%ED%8C%90%EB%B3%84%ED%95%98%EA%B8%B0/determine-escapableness-with-2-ways.py)|
+|[Intermediate Low / DFS / DFS](https://www.codetree.ai/missions?missionId=2)|[[개념]두 방향 탈출 가능 여부 판별하기](https://www.codetree.ai/missions/2/problems/determine-escapableness-with-2-ways)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/EeyoungSong/codetree-TILs/blob/main/240215/%EB%91%90%20%EB%B0%A9%ED%96%A5%20%ED%83%88%EC%B6%9C%20%EA%B0%80%EB%8A%A5%20%EC%97%AC%EB%B6%80%20%ED%8C%90%EB%B3%84%ED%95%98%EA%B8%B0/determine-escapableness-with-2-ways.py)|
 
 
 * 획득 경험치: 해설을 보지 않고 푼 문제에 한해 최초 1회 경험치를 획득하실 수 있습니다.
