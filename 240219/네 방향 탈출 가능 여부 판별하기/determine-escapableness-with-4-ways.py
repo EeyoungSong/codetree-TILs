@@ -13,18 +13,17 @@ visited = [[0 for _ in range(m)] for _ in range(n)]
 #                 q.append(next_v)
 
 def in_range(r, c):
-    return 0 <= r < n and 0 <= c < n
+    return 0 <= r < n and 0 <= c < m
 
 def bfs():
     while q:
-        if len(q) != 0:
-            r, c = q.popleft()
-            for dr, dc in ((1, 0), (0, 1), (-1, 0), (0, -1)):
-                nr, nc = r + dr, c + dc
-                if in_range(nr, nc) and graph[nr][nc] == 1 and not visited[nr][nc]:
-                    #print(nr, nc)
-                    visited[nr][nc] = 1
-                    q.append((nr, nc))
+        r, c = q.popleft()
+        for dr, dc in ((1, 0), (0, 1), (-1, 0), (0, -1)):
+            nr, nc = r + dr, c + dc
+            if in_range(nr, nc) and graph[nr][nc] == 1 and not visited[nr][nc]:
+                #print(nr, nc)
+                visited[nr][nc] = 1
+                q.append((nr, nc))
 
 q = deque()
 visited[0][0] = 1
@@ -33,8 +32,5 @@ q.append((0, 0))
 bfs()
 
 print(visited[n - 1][m - 1])
-
-
- 
 
 # 연결 리스트가 연결된 모든 정점을 찾는 데(탐색)에는 이득.. 불필요한 탐색을 줄일 수 있음
