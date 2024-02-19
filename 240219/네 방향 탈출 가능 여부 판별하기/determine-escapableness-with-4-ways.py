@@ -17,18 +17,14 @@ def in_range(r, c):
 
 def bfs():
     while q:
-        r, c = q.popleft()
-
-        for dr, dc in ((1, 0), (0, 1), (-1, 0), (0, -1)):
-            nr, nc = r + dr, c + dc
-
-            if in_range(nr, nc) and graph[nr][nc] == 1 and not visited[nr][nc]:
-                #print(nr, nc)
-                visited[nr][nc] = 1
-                q.append((nr, nc))
-
-
-
+        if len(q) != 0:
+            r, c = q.popleft()
+            for dr, dc in ((1, 0), (0, 1), (-1, 0), (0, -1)):
+                nr, nc = r + dr, c + dc
+                if in_range(nr, nc) and graph[nr][nc] == 1 and not visited[nr][nc]:
+                    #print(nr, nc)
+                    visited[nr][nc] = 1
+                    q.append((nr, nc))
 
 q = deque()
 visited[0][0] = 1
