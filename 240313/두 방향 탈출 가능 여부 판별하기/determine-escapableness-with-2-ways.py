@@ -3,7 +3,7 @@ grid = [list(map(int, input().split())) for _ in range(m)]
 visited = [[0]*n for _ in range(m)]
 
 def in_range(r, c):
-    return 0 <= r < n and 0 <= c < n
+    return 0 <= r < m and 0 <= c < n
 
 def dfs(r, c):
     for dr, dc in zip((0, 1), (1, 0)):
