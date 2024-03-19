@@ -64,7 +64,7 @@ for i in range(3, m+1):
 
 
 # 조합에 대해서 거리 계산
-if chooesd_list != 0:
+if len(chooesd_list) > 0:
     min_dis = sys.maxsize
     for c in chooesd_list:
         d = cal_distance(c)
