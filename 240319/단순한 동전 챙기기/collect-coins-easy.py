@@ -9,12 +9,12 @@ e = ('', '')
 # 자료 정리
 for i in range(n):
     for j in range(n):
-        if grid[i][j] == 'S':
-            s = (i, j)
-        elif grid[i][j] == 'E':
-            e = (i, j)
-        elif grid[i][j] != '.':
-            pos_dic[int(grid[i][j])] = (i, j)
+        # if grid[i][j] == 'S':
+        #     s = (i, j)
+        # elif grid[i][j] == 'E':
+        #     e = (i, j)
+        if grid[i][j] != '.':
+            pos_dic[grid[i][j]] = (i, j)
 
 #print(pos_dic)
 
@@ -43,12 +43,17 @@ def choose(curr_num, cnt):
     
 # 조합에 따른 거리 구하는 함수
 def cal_distance(arr):
-    s2f = abs(pos_dic[arr[0]][0] - s[0]) + abs(pos_dic[arr[0]][1] - s[1])
-    l2e = abs(pos_dic[arr[-1]][0] - e[0]) + abs(pos_dic[arr[-1]][1] - e[1])
-    t_dis = s2f + l2e
+    # s2f = abs(pos_dic[arr[0]][0] - s[0]) + abs(pos_dic[arr[0]][1] - s[1])
+    # l2e = abs(pos_dic[arr[-1]][0] - e[0]) + abs(pos_dic[arr[-1]][1] - e[1])
+
+    t_dis = 0
+    arr.insert(0, 'S')
+    arr.append('E')
+    #print(arr)
     for i in range(1, len(arr)):
-        r1, c1 = pos_dic[arr[i-1]]
-        r2, c2 = pos_dic[arr[i]]
+        #print(str(arr[i-1]))
+        r1, c1 = pos_dic[str(arr[i-1])]
+        r2, c2 = pos_dic[str(arr[i])]
         d = abs(r1 - r2) + abs(c1 - c2)
         t_dis += d
     return t_dis
@@ -56,11 +61,11 @@ def cal_distance(arr):
 
 # 3 ~ m 까지 p를 바꿔가면서 최솟값 구해야함 
 answer = -1
-m = len(pos_dic)
+m = len(pos_dic) - 2
 for i in range(3, m+1):
     p = i
     choose(1, 0)
-
+#print(chooesd_list)
 
 
 # 조합에 대해서 거리 계산
