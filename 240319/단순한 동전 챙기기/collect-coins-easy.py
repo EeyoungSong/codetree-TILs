@@ -55,11 +55,12 @@ def cal_distance(arr):
 
 
 # 3 ~ m 까지 p를 바꿔가면서 최솟값 구해야함 
+answer = -1
 m = len(pos_dic)
 for i in range(3, m+1):
     p = i
     choose(1, 0)
-#print(chooesd_list)
+
 
 
 # 조합에 대해서 거리 계산
@@ -69,4 +70,7 @@ for c in chooesd_list:
     #print(d)
     min_dis = min(d, min_dis)
 
-print(min_dis)
+if len(chooesd_list) != 0:
+    answer = min_dis
+
+print(answer)
