@@ -6,7 +6,7 @@ pos_dic = {}
 s = ('', '')
 e = ('', '')
 
-# 자료 변형
+# 자료 정리
 for i in range(n):
     for j in range(n):
         if grid[i][j] == 'S':
@@ -64,11 +64,12 @@ for i in range(3, m+1):
 
 
 # 조합에 대해서 거리 계산
-min_dis = sys.maxsize
-for c in chooesd_list:
-    d = cal_distance(c)
-    #print(d)
-    min_dis = min(d, min_dis)
+if chooesd_list != 0:
+    min_dis = sys.maxsize
+    for c in chooesd_list:
+        d = cal_distance(c)
+        #print(d)
+        min_dis = min(d, min_dis)
 
 if len(chooesd_list) != 0:
     answer = min_dis
