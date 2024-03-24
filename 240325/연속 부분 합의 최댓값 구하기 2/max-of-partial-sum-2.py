@@ -1,13 +1,13 @@
 n = int(input())
 arr = list(map(int, input().split()))
 
-s_arr = []
+max_s = arr[0]
 for i in range(n):
     s = arr[i]
     for j in range(i+1, n):
         if s + arr[j] < 0:
             break
         s += arr[j]
-    s_arr.append(s)
+    max_s = max(s, max_s)
 
-print(max(s_arr))
+print(max_s)
