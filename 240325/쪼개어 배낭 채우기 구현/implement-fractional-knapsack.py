@@ -17,3 +17,6 @@ while True:
     w_sum += arr[idx][0]
     v_sum += arr[idx][1]
     idx += 1
+    if idx >= len(arr):
+        print("%.3f" % v_sum)
+        break
