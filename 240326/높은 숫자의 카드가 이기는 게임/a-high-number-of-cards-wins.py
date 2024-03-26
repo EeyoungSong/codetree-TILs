@@ -9,5 +9,6 @@ for b in b_arr:
     for a in a_arr:
         if b < a:
             point += 1
+            a_arr.remove(a)
             break
 print(point)
