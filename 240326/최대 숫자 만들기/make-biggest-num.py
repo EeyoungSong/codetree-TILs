@@ -10,15 +10,14 @@ def compare(x, y):
             return 1
     # x가 y보다 크다면
     # 우리가 원하는 방향입니다.
-    elif x > y:
+    if x > y:
         return -1
     # y가 x보다 크다면
     # 우리가 원하지 않는 방향입니다.
-    elif y > x:
+    if y > x:
         return 1
     # 우선 순위가 동일한 경우입니다.
-    else:
-        return 0
+    return 0
 
 
 n = int(input())
