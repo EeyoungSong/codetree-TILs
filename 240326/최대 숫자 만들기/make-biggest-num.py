@@ -17,14 +17,8 @@ def compare(x, y):
     elif y > x:
         return 1
     # 우선 순위가 동일한 경우입니다.
-    return 0
-
-
-# 내림차순 정렬
-#arr.sort(key=cmp_to_key(compare))
-
-# for elem in arr: # 정렬 이후의 결과 출력
-#     print(elem, end=" ")
+    else:
+        return 0
 
 
 n = int(input())
