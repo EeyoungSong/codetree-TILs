@@ -7,10 +7,13 @@ used_arr = [0] * MAX_NUM
 
 cnt = 0
 for elem in arr:
-    if used_arr[elem[0]] != 0:
-        continue
-    cnt += 1
+    empty = True
     for i in range(elem[0], elem[1]):
-        used_arr[i] = 1
+        if used_arr[i] == 1:
+            empty = False
+    if empty == True:
+        cnt += 1
+        for i in range(elem[0], elem[1]):
+            used_arr[i] = 1
 
 print(cnt)
