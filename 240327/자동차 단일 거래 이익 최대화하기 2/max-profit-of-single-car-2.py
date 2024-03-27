@@ -1,3 +1,5 @@
+import copy
+
 n = int(input())
 arr = list(map(int, input().split()))
 
@@ -7,8 +9,22 @@ arr = list(map(int, input().split()))
 
 # print(max_num - min_num)
 
+max_profit = 0
 max_num = max(arr)
 idx = arr.index(max_num)
 min_num = min(arr[:idx+1])
+arr = copy.deepcopy(arr[idx+1:])
+max_profit = max(max_profit, max_num - min_num)
 
-print(max_num - min_num)
+while len(arr) != 0:
+    max_num = max(arr)
+    idx = idx = arr.index(max_num)
+    min_num = min(arr[:idx+1])
+    arr = copy.deepcopy(arr[idx+1:])
+    max_profit = max(max_profit, max_num - min_num)
+
+print(max_profit)
+
+
+
+# 뒤에서 반복하기
