@@ -47,7 +47,7 @@ def block2(r, c):
 
 ans = 0
 for i in range(n):
-    for j in range(n):
+    for j in range(m):
         t = max(block1(i, j), block2(i, j))
         ans = max(ans, t)
 print(ans)
