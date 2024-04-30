@@ -7,6 +7,8 @@ for i in range(n):
     for j in range(1, n):
         if grid[i][j-1] == grid[i][j]:
             cnt += 1
+        else:
+            cnt = 1
     if cnt >= m:
         ans += 1
 
@@ -15,6 +17,8 @@ for j in range(n):
     for i in range(1, n):
         if grid[i][j] == grid[i-1][j]:
             cnt += 1
+        else:
+            cnt = 1
     if cnt >= m:
         ans += 1
 
