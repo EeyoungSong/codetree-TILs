@@ -2,7 +2,7 @@ n, m = map(int, input().split())
 grid = [list(map(int, input().split())) for _ in range(n)]
 
 def in_range(r, c):
-    return 0 <= r < n and 0 <= c < n
+    return 0 <= r < n and 0 <= c < m
 
 def block1(r, c):
     arr1 = ([0, 0, -1], [0, 1, 0])
