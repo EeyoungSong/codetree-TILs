@@ -7,12 +7,13 @@ for i in range(n):
     cnt = 1
     for j in range(1, n):
         if grid[i][j-1] == grid[i][j]:
-            cnt += 1
+            cnt += 1            
         else:
-            max_cnt = max(max_cnt, cnt)
             cnt = 1
-    if cnt >= m:
-        ans += 1
+        if cnt >= m:
+            ans += 1
+            break
+
 
 for j in range(n):
     max_cnt = 0
@@ -21,9 +22,10 @@ for j in range(n):
         if grid[i][j] == grid[i-1][j]:
             cnt += 1
         else:
-            max_cnt = max(max_cnt, cnt)
             cnt = 1
-    if cnt >= m:
-        ans += 1
+        if cnt >= m:
+            ans += 1
+            break
+
 
 print(ans)
