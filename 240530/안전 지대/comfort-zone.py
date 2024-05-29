@@ -54,4 +54,4 @@ if ans == 0:
     index = 1
 else:
     index = ans_arr.index(ans)
-print(ans_arr.index(ans), ans)
+print(index, ans)
