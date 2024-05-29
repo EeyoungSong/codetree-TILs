@@ -28,7 +28,7 @@ def dfs(r, c):
 
 
 MAXNUM = 101
-ans_arr = [0] * MAXNUM 
+ans_arr = [0] * MAXNUM
 br = False
 for k in range(1, MAXNUM):
     if br:
@@ -50,4 +50,8 @@ for k in range(1, MAXNUM):
         br = True
 
 ans = max(ans_arr)
+if ans == 0:
+    index = 1
+else:
+    index = ans_arr.index(ans)
 print(ans_arr.index(ans), ans)
