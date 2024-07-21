@@ -15,7 +15,7 @@ visited = [[0 for _ in range(m)]
             for _ in range(n)]
 
 def in_range(r, c):
-    return 0 <= r < n and 0 <= c < n
+    return 0 <= r < n and 0 <= c < m
 
 def can_go(r, c):
     return in_range(r, c) and not visited[r][c] and grid[r][c] == 1
@@ -34,5 +34,6 @@ def bfs():
 q = deque()
 q.append((0, 0))
 bfs()
+
 
 print(answer[n-1][m-1])
