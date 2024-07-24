@@ -25,6 +25,19 @@ def can_go(r, c):
 def bfs():
     max_idx = (n, n)
     max_num = 0
+
+    b = True
+    tr, tc = q.popleft()
+    drs, dcs = [0, 1, 0, -1], [1, 0, -1, 0]
+    for dr, dc in zip(drs, dcs):
+        nr, nc = tr + dr, tc + dc
+        if can_go(nr, nc):
+            b = False
+    if b == True:
+        return tr, tc
+
+    q.append((tr, tc))
+    
     while q:
         r, c = q.popleft()
         drs, dcs = [0, 1, 0, -1], [1, 0, -1, 0]
@@ -44,7 +57,7 @@ def bfs():
                     max_num = grid[nr][nc]
                     max_idx = (nr, nc)
 
-     
+
     return max_idx
 
 
