@@ -1,6 +1,6 @@
 n = int(input())
 arr = [0] + list(map(int, input().split()))
-count_arr = [0] * len(set(arr))
+count_arr = [0] * 1000000
 
 ans = 0
 j = 0
